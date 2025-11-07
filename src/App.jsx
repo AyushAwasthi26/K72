@@ -5,6 +5,7 @@ import Projects from './pages/Projects'
 import Agency from './pages/Agency'
 import Navbar from './components/navigation/Navbar'
 import FullScreenNav from './components/navigation/FullScreenNav'
+import './index.css'
 
 const App = () => {
   return (

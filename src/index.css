@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+
+
+
+@font-face {
+    font-family: font1;
+    src: url(../fonts/Lausanne-300.woff2);
+}
+
+@font-face {
+    font-family: font2;
+    src: url(../fonts/Lausanne-500.woff2);
+}
+
+
+
+.moveX{  /*Our Class will have this Animation*/
+    animation: moveAnimation 6s linear infinite;
+}
+
+@keyframes moveAnimation { /* Animation we have made!*/
+    from{
+      transform: translateX(0);
+    }
+    to{
+      transform: translateX(-100%);
+    }
+  }
+
+
+.moveLink {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+
+.link:hover .moveLink{
+    opacity: 1;
+}
+
+.stairing {
+    height: 0;
+}
+
+.link {
+    opacity: 0;
+    transform: rotateX(90deg);
+}
+
+.stairing, .link, .moveX, .moveLink {
+  will-change: transform, opacity;
+}

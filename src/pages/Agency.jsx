@@ -5,7 +5,6 @@ import gsap from "gsap";
 import Time from "../components/home/Time";
 import { Link } from "react-router-dom";
 
-
 const Agency = () => {
   const imageDivRef = useRef(null);
   const imageRef = useRef(null);
@@ -288,16 +287,14 @@ const Agency = () => {
         {/* MEMBER 1 */}
         <div className="relative w-full h-screen flex justify-center items-center mb-[2vw] lg:mb-[20vh]">
           {/* First name (moves left) */}
-          <div className="absolute top-[35vh] left-0 transform -translate-y-1/2 w-[200%] overflow-hidden z-0">
+          <div className="absolute top-[40vh] lg:top-[35vh] left-0 transform -translate-y-1/2 w-[200%] overflow-hidden z-0">
             <div className="marqueeTrack flex whitespace-nowrap space-x-[80vh]">
               <div className="nameMarquee flex text-[14vw] sm:text-[10vw] font-[font2] text-[#D3FD50] uppercase space-x-[80vh]">
-
                 <span>Camille&nbsp;</span>
                 <span>Camille&nbsp;</span>
                 <span>Camille&nbsp;</span>
               </div>
               <div className="nameMarquee flex text-[14vw] sm:text-[10vw] font-[font2] text-[#D3FD50] uppercase space-x-[80vh]">
-
                 <span>Camille&nbsp;</span>
                 <span>Camille&nbsp;</span>
                 <span>Camille&nbsp;</span>
@@ -307,7 +304,6 @@ const Agency = () => {
 
           {/* Image */}
           <div className="z-10 rounded-2xl overflow-hidden shadow-lg w-[60vw] h-[80vw] sm:w-[65vh] sm:h-[98vh]">
-
             <img
               src="/Media/Agency/people/p1.jpg"
               className="w-full h-full object-cover"
@@ -316,10 +312,9 @@ const Agency = () => {
           </div>
 
           {/* Surname (moves right) */}
-          <div className="absolute bottom-[35vh] left-0 transform translate-y-1/2 w-[200%] overflow-hidden z-20">
+          <div className="absolute bottom-[40vh] lg:bottom-[35vh] left-0 transform translate-y-1/2 w-[200%] overflow-hidden z-20">
             <div className="marqueeTrack flex whitespace-nowrap space-x-[80vh]">
               <div className="nameMarquee flex text-[14vw] sm:text-[10vw] font-[font2] text-[#D3FD50] uppercase space-x-[80vh]">
-
                 <span>
                   BRIÈRE&nbsp;
                   <span className="text-white text-4xl justify-end">
@@ -340,7 +335,6 @@ const Agency = () => {
                 </span>
               </div>
               <div className="nameMarquee flex text-[14vw] sm:text-[10vw] font-[font2] text-[#D3FD50] uppercase space-x-[80vh]">
-
                 <span>
                   BRIÈRE&nbsp;
                   <span className="text-white text-4xl justify-end">
@@ -367,16 +361,14 @@ const Agency = () => {
         {/* MEMBER 2 */}
         <div className="relative w-full h-screen flex justify-center items-center">
           {/* First name (moves left) */}
-          <div className="absolute top-[35vh] left-0 transform -translate-y-1/2 w-[200%] overflow-hidden z-0">
+          <div className="absolute top-[40vh] lg:top-[35vh] left-0 transform -translate-y-1/2 w-[200%] overflow-hidden z-0">
             <div className="marqueeTrack flex whitespace-nowrap space-x-[80vh]">
               <div className="nameMarquee flex text-[14vw] sm:text-[10vw] font-[font2] text-[#D3FD50] uppercase space-x-[80vh]">
-
                 <span>Michèle&nbsp;</span>
                 <span>Michèle&nbsp;</span>
                 <span>Michèle&nbsp;</span>
               </div>
               <div className="nameMarquee flex text-[14vw] sm:text-[10vw] font-[font2] text-[#D3FD50] uppercase space-x-[80vh]">
-
                 <span>Michèle&nbsp;</span>
                 <span>Michèle&nbsp;</span>
                 <span>Michèle&nbsp;</span>
@@ -386,7 +378,6 @@ const Agency = () => {
 
           {/* Image */}
           <div className="z-10 rounded-2xl overflow-hidden shadow-lg w-[60vw] h-[80vw] sm:w-[65vh] sm:h-[98vh]">
-
             <img
               src="/Media/Agency/people/p2.jpg"
               className="w-full h-full object-cover"
@@ -395,10 +386,9 @@ const Agency = () => {
           </div>
 
           {/* Surname (moves right) */}
-          <div className="absolute bottom-[35vh] left-0 transform translate-y-1/2 w-[200%] overflow-hidden z-20">
+          <div className="absolute bottom-[40vh] lg:bottom-[35vh] left-0 transform translate-y-1/2 w-[200%] overflow-hidden z-20">
             <div className="marqueeTrack flex whitespace-nowrap space-x-[80vh]">
               <div className="nameMarquee flex text-[14vw] sm:text-[10vw] font-[font2] text-[#D3FD50] uppercase space-x-[80vh]">
-
                 <span>
                   RIENDEAU&nbsp;
                   <span className="text-white text-4xl justify-end">
@@ -419,7 +409,6 @@ const Agency = () => {
                 </span>
               </div>
               <div className="nameMarquee flex text-[14vw] sm:text-[10vw] font-[font2] text-[#D3FD50] uppercase space-x-[80vh]">
-
                 <span>
                   RIENDEAU&nbsp;
                   <span className="text-white text-4xl justify-end">
@@ -470,8 +459,12 @@ const Agency = () => {
 
       <div className="w-full bg-black relative">
         <div className="sticky top-0 w-full min-h-[80vh] sm:h-screen flex items-center justify-center px-2 sm:px-4">
-
-          <div onClick={() => window.open("https://k72.ca/en/work/we-see-you-like-no-other")} className="relative cursor-pointer font-[font2] w-full h-full rounded-[5vh] overflow-hidden">
+          <div
+            onClick={() =>
+              window.open("https://k72.ca/en/work/we-see-you-like-no-other")
+            }
+            className="relative cursor-pointer font-[font2] w-full h-full rounded-[5vh] overflow-hidden"
+          >
             <img
               src="/Media/Agency/pro-slides/p1.jpg"
               className="w-full h-full object-cover object-top hover:scale-105 transition-all duration-500"
@@ -479,14 +472,18 @@ const Agency = () => {
             />
             <div className="absolute flex flex-col space-y-[3vh] justify-center items-center text-center font-[font2] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white">
               <div className="text-[4vh]">Opto-Réseau</div>
-              <h2 className="text-[8.5vh]">We see you like no other</h2>
+              <h2 className="text-[5vh] lg:text-[8.5vh]">
+                We see you like no other
+              </h2>
             </div>
           </div>
         </div>
 
         <div className="sticky top-0 w-full min-h-[80vh] sm:h-screen flex items-center justify-center px-2 sm:px-4">
-
-          <div onClick={() => window.open("https://k72.ca/en/work/lamajeure")} className="relative cursor-pointer font-[font2] w-full h-full rounded-[5vh] overflow-hidden">
+          <div
+            onClick={() => window.open("https://k72.ca/en/work/lamajeure")}
+            className="relative cursor-pointer font-[font2] w-full h-full rounded-[5vh] overflow-hidden"
+          >
             <img
               src="/Media/Agency/pro-slides/p2.jpg"
               className="w-full h-full object-cover object-top hover:scale-105 transition-all duration-500"
@@ -500,8 +497,10 @@ const Agency = () => {
         </div>
 
         <div className="sticky top-0 w-full min-h-[80vh] sm:h-screen flex items-center justify-center px-2 sm:px-4">
-
-          <div onClick={() => window.open("https://k72.ca/en/work/fruite")} className="relative cursor-pointer font-[font2] w-full h-full rounded-[5vh] overflow-hidden">
+          <div
+            onClick={() => window.open("https://k72.ca/en/work/fruite")}
+            className="relative cursor-pointer font-[font2] w-full h-full rounded-[5vh] overflow-hidden"
+          >
             <img
               src="/Media/Agency/pro-slides/p3.jpg"
               className="w-full h-full object-cover object-top hover:scale-105 transition-all duration-500"
@@ -521,6 +520,18 @@ const Agency = () => {
           {["FB", "IG", "IN", "BE"].map((s, i) => (
             <div
               key={i}
+              onClick={() =>
+                window.open(
+                  s === "FB"
+                    ? "https://www.linkedin.com/in/ayush-awasthi-dev/"
+                    : s === "IG"
+                    ? "https://x.com/otakuayush_"
+                    : s === "IN"
+                    ? "https://github.com/AyushAwasthi26"
+                    : "https://leetcode.com/studyplan/leetcode-75/",
+                  "_blank"
+                )
+              }
               className="border-3 border-white rounded-full pt-2 px-3 lg:px-6 text-[5vh] md:text-[9.5vh] font-[font2] cursor-pointer hover:border-[#D3FD50] text-white hover:text-[#D3FD50] transition-all duration-300"
             >
               {s}
@@ -571,7 +582,6 @@ const Agency = () => {
         </div>
 
         <div className="text-white font-[font2] absolute bottom-[2%] right-[2%] text-[5vw] sm:text-[3vw] lg:text-[1.3vw] mb-3 cursor-pointer uppercase">
-
           Back to top
         </div>
       </div>

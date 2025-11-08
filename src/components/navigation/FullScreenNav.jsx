@@ -9,8 +9,8 @@ const FullScreenNav = () => {
   const fullNavLinksRef = useRef(null);
   const fullScreenRef = useRef(null);
 
-  const [navOpen, setNavOpen, isAnimating, setIsAnimating] = useContext(NavbarContext);
-
+  const [navOpen, setNavOpen, isAnimating, setIsAnimating] =
+    useContext(NavbarContext);
 
   function gsapAnimation() {
     setIsAnimating(true);
@@ -118,93 +118,100 @@ const FullScreenNav = () => {
           </div>
         </div>
         <div className=" pt-[8vh]">
-          <div className="link overflow-hidden p-1 origin-top relative border-t-1 border-white"><Link to='/projects' onClick={() => setNavOpen(false)}>
-            <h1 className="font-[font2] text-5vw lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
-              work
-            </h1>
-            <div className="moveLink left-0 w-full h-full absolute text-black flex top-0 bg-[#D3FD50]">
-              <div className="moveX gap-5 h-full flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
-                  See Everything
-                </h2>
-                <img
-                  className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
-                  src="/Media/NavBar/b1-1.jpg"
-                  alt=""
-                />
-                <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
-                  See Everything
-                </h2>
-                <img
-                  className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
-                  src="/Media/NavBar/b1-2.jpg"
-                  alt=""
-                />
+          <div className="link overflow-hidden p-1 origin-top relative border-t-1 border-white">
+            <Link to="/projects" onClick={() => setNavOpen(false)}>
+              <h1 className="font-[font2] text-5vw lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
+                work
+              </h1>
+              <div className="moveLink left-0 w-full h-full absolute text-black flex top-0 bg-[#D3FD50]">
+                <div className="moveX gap-5 h-full flex items-center">
+                  <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
+                    See Everything
+                  </h2>
+                  <img
+                    className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
+                    src="/Media/NavBar/b1-1.jpg"
+                    alt=""
+                  />
+                  <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
+                    See Everything
+                  </h2>
+                  <img
+                    className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
+                    src="/Media/NavBar/b1-2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className="moveX gap-5 h-full flex items-center">
+                  <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
+                    See Everything
+                  </h2>
+                  <img
+                    className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
+                    src="/Media/NavBar/b1-1.jpg"
+                    alt=""
+                  />
+                  <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
+                    See Everything
+                  </h2>
+                  <img
+                    className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
+                    src="/Media/NavBar/b1-2.jpg"
+                    alt=""
+                  />
+                </div>
               </div>
-              <div className="moveX gap-5 h-full flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
-                  See Everything
-                </h2>
-                <img
-                  className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
-                  src="/Media/NavBar/b1-1.jpg"
-                  alt=""
-                />
-                <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
-                  See Everything
-                </h2>
-                <img
-                  className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
-                  src="/Media/NavBar/b1-2.jpg"
-                  alt=""
-                />
-              </div>
-            </div></Link>
+            </Link>
           </div>
-          <div className="link overflow-hidden p-1 origin-top relative border-t-1 border-white"><Link to='/agency' onClick={() => setNavOpen(false)}>
-            <h1 className="font-[font2] text-5vw lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
-              Agency
-            </h1>
-            <div className="moveLink left-0 w-full h-full absolute text-black flex top-0 bg-[#D3FD50]">
-              <div className="moveX gap-5 h-full flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
-                  Know us
-                </h2>
-                <img
-                  className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
-                  src="/Media/NavBar/b2-1.jpg"
-                  alt=""
-                />
-                <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
-                  Know us
-                </h2>
-                <img
-                  className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
-                  src="/Media/NavBar/b2-2.jpg"
-                  alt=""
-                />
+          <div className="link overflow-hidden p-1 origin-top relative border-t-1 border-white">
+            <Link to="/agency" onClick={() => setNavOpen(false)}>
+              <h1 className="font-[font2] text-5vw lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
+                Agency
+              </h1>
+              <div className="moveLink left-0 w-full h-full absolute text-black flex top-0 bg-[#D3FD50]">
+                <div className="moveX gap-5 h-full flex items-center">
+                  <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
+                    Know us
+                  </h2>
+                  <img
+                    className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
+                    src="/Media/NavBar/b2-1.jpg"
+                    alt=""
+                  />
+                  <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
+                    Know us
+                  </h2>
+                  <img
+                    className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
+                    src="/Media/NavBar/b2-2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div className="moveX gap-5 h-full flex items-center">
+                  <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
+                    Know us
+                  </h2>
+                  <img
+                    className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
+                    src="/Media/NavBar/b2-1.jpg"
+                    alt=""
+                  />
+                  <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
+                    Know us
+                  </h2>
+                  <img
+                    className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
+                    src="/Media/NavBar/b2-2.jpg"
+                    alt=""
+                  />
+                </div>
               </div>
-              <div className="moveX gap-5 h-full flex items-center">
-                <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
-                  Know us
-                </h2>
-                <img
-                  className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
-                  src="/Media/NavBar/b2-1.jpg"
-                  alt=""
-                />
-                <h2 className="whitespace-nowrap font-[font2] lg:text-[8vw] text-5vw  text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
-                  Know us
-                </h2>
-                <img
-                  className="h-full w-[20vw] p-2 shrink-0 rounded-full object-cover"
-                  src="/Media/NavBar/b2-2.jpg"
-                  alt=""
-                />
-              </div>
-            </div></Link>
+            </Link>
           </div>
-          <div onClick={() => window.open("https://k72.ca/en/contact", "_blank")} className="link overflow-hidden p-1 origin-top relative border-t-1 border-white">
+          <div
+            onClick={() => window.open("https://k72.ca/en/contact", "_blank")}
+            className="link overflow-hidden p-1 origin-top relative border-t-1 border-white"
+          >
             <h1 className="font-[font2] text-5vw lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
               Contact
             </h1>
@@ -247,7 +254,10 @@ const FullScreenNav = () => {
               </div>
             </div>
           </div>
-          <div onClick={() => window.open("https://k72.ca/en/blog", "_blank")} className="link overflow-hidden p-1 origin-top relative border-y-1 border-white">
+          <div
+            onClick={() => window.open("https://k72.ca/en/blog", "_blank")}
+            className="link overflow-hidden p-1 origin-top relative border-y-1 border-white"
+          >
             <h1 className="font-[font2] text-5vw lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
               Blog
             </h1>
@@ -328,6 +338,18 @@ const FullScreenNav = () => {
           {["FB", "IG", "IN", "BE"].map((s, i) => (
             <div
               key={i}
+              onClick={() =>
+                window.open(
+                  s === "FB"
+                    ? "https://www.linkedin.com/in/ayush-awasthi-dev/"
+                    : s === "IG"
+                    ? "https://x.com/otakuayush_"
+                    : s === "IN"
+                    ? "https://github.com/AyushAwasthi26"
+                    : "https://leetcode.com/studyplan/leetcode-75/",
+                  "_blank"
+                )
+              }
               className="border-2 border-white rounded-full px-2.5 pt-1 text-[3.5vh] sm:text-[4.5vh] cursor-pointer hover:border-[#D3FD50] hover:text-[#D3FD50] transition-all duration-300"
             >
               {s}

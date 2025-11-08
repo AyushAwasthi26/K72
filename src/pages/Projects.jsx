@@ -102,6 +102,18 @@ export default function Projects() {
           {["FB", "IG", "IN", "BE"].map((s, i) => (
             <div
               key={i}
+              onClick={() =>
+                window.open(
+                  s === "FB"
+                    ? "https://www.linkedin.com/in/ayush-awasthi-dev/"
+                    : s === "IG"
+                    ? "https://x.com/otakuayush_"
+                    : s === "IN"
+                    ? "https://github.com/AyushAwasthi26"
+                    : "https://leetcode.com/studyplan/leetcode-75/",
+                  "_blank"
+                )
+              }
               className="border-3 border-white rounded-full pt-2 px-3 lg:px-6 text-[5vh] md:text-[9.5vh] font-[font2] cursor-pointer hover:border-[#D3FD50] text-white hover:text-[#D3FD50] transition-all duration-300"
             >
               {s}

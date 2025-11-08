@@ -538,7 +538,7 @@ const Agency = () => {
             </div>
           ))}
         </div>
-        <div className="hidden absolute group lg:flex items-center justify-center overflow-hidden gap-3 right-[0.7%] top-[2.5%] border-3 w-auto border-white rounded-full px-6  cursor-pointer hover:border-[#D3FD50] text-white hover:text-[#D3FD50] transition-all duration-300">
+        <div onClick={() => window.open("https://www.linkedin.com/in/ayush-awasthi-dev/", "_blank")} className="hidden absolute group lg:flex items-center justify-center overflow-hidden gap-3 right-[0.7%] top-[2.5%] border-3 w-auto border-white rounded-full px-6  cursor-pointer hover:border-[#D3FD50] text-white hover:text-[#D3FD50] transition-all duration-300">
           <div className="text-[5.5vh] sm:text-[9.5vh] font-[font2] text-white group-hover:text-[#D3FD50] transition-all duration-300 uppercase pt-2">
             Contact
           </div>

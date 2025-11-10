@@ -7,10 +7,10 @@ import HomeMid from '../components/home/HomeMid'
 export default function Home () {
   return (
     <div className='text-white'>
-      <div className='h-screen w-screen fixed'>
+      <div className='h-screen w-full fixed'>
         <Video />
       </div>
-      <div className='h-screen w-screen relative pb-5 flex flex-col justify-between'>
+      <div className='h-screen w-full relative pb-5 flex flex-col justify-between'>
         <HomeHero />
         <HomeMid />
         <HomeBottom />

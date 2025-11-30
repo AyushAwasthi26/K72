@@ -4,6 +4,8 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { NavbarContext } from "../../context/NavContext";
 import Time from "../home/Time";
 import { Link } from "react-router-dom";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 const FullScreenNav = () => {
   const fullNavLinksRef = useRef(null);
@@ -67,6 +69,23 @@ const FullScreenNav = () => {
     [navOpen]
   );
 
+  // Function to scroll to top of page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  };
+
+  // Handle link click - navigate and scroll to top
+  const handleLinkClick = () => {
+    scrollToTop();
+    setTimeout(() => {
+      // ← Then refresh ScrollTrigger after a delay
+      ScrollTrigger.refresh();
+    }, 100);
+  };
+
   return (
     <div
       ref={fullScreenRef}
@@ -86,7 +105,13 @@ const FullScreenNav = () => {
         <div className="navlink flex w-full justify-between lg:p-1 p-2 items-start">
           <div className="p-1.5 flex gap-10">
             <div className="lg:w-30 w-24">
-              <Link to="/" onClick={() => setNavOpen(false)}>
+              <Link
+                onClick={() => {
+                  handleLinkClick();
+                  setNavOpen(false);
+                }}
+                to="/"
+              >
                 <svg
                   className=" w-full"
                   xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +133,10 @@ const FullScreenNav = () => {
             </div>
           </div>
           <div
-            onClick={() => setNavOpen(false)}
+            onClick={() => {
+              handleLinkClick();
+              setNavOpen(false);
+            }}
             className="relative cursor-pointer group flex items-center justify-center lg:w-32 lg:h-32 w-20 h-20"
           >
             <div className="absolute flex items-center justify-center w-full h-full">
@@ -119,7 +147,13 @@ const FullScreenNav = () => {
         </div>
         <div className=" pt-[8vh]">
           <div className="link overflow-hidden p-1 origin-top relative border-t-1 border-white">
-            <Link to="/projects" onClick={() => setNavOpen(false)}>
+            <Link
+              onClick={() => {
+                handleLinkClick();
+                setNavOpen(false);
+              }}
+              to="/projects"
+            >
               <h1 className="font-[font2] text-5vw lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
                 work
               </h1>
@@ -164,7 +198,13 @@ const FullScreenNav = () => {
             </Link>
           </div>
           <div className="link overflow-hidden p-1 origin-top relative border-t-1 border-white">
-            <Link to="/agency" onClick={() => setNavOpen(false)}>
+            <Link
+              onClick={() => {
+                handleLinkClick();
+                setNavOpen(false);
+              }}
+              to="/agency"
+            >
               <h1 className="font-[font2] text-5vw lg:text-[8vw] text-center lg:leading-[0.8] lg:pt-4 pt-1 uppercase">
                 Agency
               </h1>

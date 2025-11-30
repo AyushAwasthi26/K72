@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import Time from "../components/home/Time";
-import { Link } from "react-router-dom";
-
+import { Link, useLocation } from "react-router-dom";
 const Agency = () => {
+  const location = useLocation(); // ← ADD THIS LINE
   const imageDivRef = useRef(null);
   const imageRef = useRef(null);
   const teamSectionRef = useRef(null);
@@ -102,6 +102,28 @@ const Agency = () => {
   ];
 
   gsap.registerPlugin(ScrollTrigger);
+
+  // Reset scroll position and refresh ScrollTrigger on component mount
+  // ✅ UPDATE THIS useEffect
+  useEffect(() => {
+    // Immediate scroll to top
+    window.scrollTo(0, 0);
+
+    // Force scroll again after a tiny delay
+    const immediateScroll = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 10);
+
+    // Refresh ScrollTrigger
+    const refreshTimer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
+    return () => {
+      clearTimeout(immediateScroll);
+      clearTimeout(refreshTimer);
+    };
+  }, [location.pathname]); // ← Change from [] to [location.pathname]
 
   useGSAP(() => {
     gsap.to(imageDivRef.current, {
@@ -538,7 +560,15 @@ const Agency = () => {
             </div>
           ))}
         </div>
-        <div onClick={() => window.open("https://www.linkedin.com/in/ayush-awasthi-dev/", "_blank")} className="hidden absolute group lg:flex items-center justify-center overflow-hidden gap-3 right-[0.7%] top-[2.5%] border-3 w-auto border-white rounded-full px-6  cursor-pointer hover:border-[#D3FD50] text-white hover:text-[#D3FD50] transition-all duration-300">
+        <div
+          onClick={() =>
+            window.open(
+              "https://www.linkedin.com/in/ayush-awasthi-dev/",
+              "_blank"
+            )
+          }
+          className="hidden absolute group lg:flex items-center justify-center overflow-hidden gap-3 right-[0.7%] top-[2.5%] border-3 w-auto border-white rounded-full px-6  cursor-pointer hover:border-[#D3FD50] text-white hover:text-[#D3FD50] transition-all duration-300"
+        >
           <div className="text-[5.5vh] sm:text-[9.5vh] font-[font2] text-white group-hover:text-[#D3FD50] transition-all duration-300 uppercase pt-2">
             Contact
           </div>

@@ -10,6 +10,19 @@ const Navbar = () => {
 
   if (navOpen || isAnimating) return null;
 
+  // Function to scroll to top of page
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  };
+
+  // Handle link click - navigate and scroll to top
+  const handleLinkClick = () => {
+    scrollToTop();
+  };
+
   return (
     <div
       className={`z-40 flex ${
@@ -17,7 +30,7 @@ const Navbar = () => {
       } top-0 w-full items-start justify-between`}
     >
       <div className="lg:p-5 p-2">
-        <Link to="/">
+        <Link to="/" onClick={handleLinkClick}>
           <div className="lg:w-36 w-24">
             <svg
               className="w-full"
